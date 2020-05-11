@@ -152,9 +152,14 @@ table {
   src: local('Contrail One'), local('ContrailOne-Regular'), url(https://fonts.gstatic.com/s/contrailone/v9/eLGbP-j_JA-kG0_Zo51noafdZQ.ttf) format('truetype');
 }
 html {
-  height: 100%;
+  height: 120%;
   width: 100%;
   background-color: #000000;
+}
+@media (max-width: 500px) {
+  html {
+    height: 80%;
+  }
 }
 body {
   height: 100%;
@@ -183,6 +188,12 @@ body {
 .myName img {
   width: 200px;
 }
+@media (max-width: 500px) {
+  .myName img {
+    width: 100px;
+    height: 100px;
+  }
+}
 .myName div {
   padding: 0 1%;
   height: 200px;
@@ -190,6 +201,11 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+@media (max-width: 500px) {
+  .myName div {
+    height: 100px;
+  }
 }
 .myName div h1,
 .myName div h2,
@@ -206,11 +222,26 @@ h3 {
 h1 {
   font-size: 2.5rem;
 }
+@media (max-width: 500px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+}
 h2 {
   font-size: 1.9rem;
 }
+@media (max-width: 500px) {
+  h2 {
+    font-size: 1.2rem;
+  }
+}
 h3 {
   font-size: 1.4rem;
+}
+@media (max-width: 500px) {
+  h3 {
+    font-size: 0.9rem;
+  }
 }
 .headerBtns {
   height: 100px;
@@ -218,25 +249,63 @@ h3 {
   flex-direction: column;
   justify-content: space-around;
 }
+@media (max-width: 500px) {
+  .headerBtns {
+    height: 50px;
+  }
+}
+.headerBtns nav {
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 500px) {
+  .headerBtns nav {
+    flex-wrap: wrap;
+  }
+}
 p {
   font-family: 'Days One', sans-serif;
   color: gold;
 }
+@media (max-width: 500px) {
+  p {
+    font-size: 0.8rem;
+  }
+}
 .buttonLinks {
-  width: 100px;
-  height: 30px;
+  width: 120px;
+  height: 40px;
   border-radius: 10px;
   font-family: 'Contrail One', cursive;
   font-size: 1.2rem;
 }
+@media (max-width: 500px) {
+  .buttonLinks {
+    width: 60px;
+    height: 20px;
+    border-radius: 5px;
+    font-size: 0.6rem;
+  }
+}
 .myDetails {
   width: 100%;
   padding: 0 2%;
+  margin: 2% 0;
   display: flex;
   justify-content: space-between;
 }
 .myDetails div {
   width: 45%;
+}
+.myDetails p {
+  background-color: #262728;
+  margin: 2% 0;
+}
+@media (max-width: 500px) {
+  .myDetails p {
+    font-size: 0.75rem;
+  }
 }
 .myDetails table,
 .myDetails tr {
@@ -247,11 +316,62 @@ p {
   font-size: 1.25rem;
   color: gold;
 }
+@media (max-width: 500px) {
+  .myDetails table,
+  .myDetails tr {
+    font-size: 0.75rem;
+  }
+}
 .myDetails td {
   padding: 2%;
   background: #262728;
 }
 .myHistory {
   width: 100%;
+  margin: 4% 0;
   padding: 0 2%;
+}
+.myHistory table {
+  width: 90%;
+}
+.myHistory table,
+.myHistory tr {
+  border: 2px solid #011FFD;
+  font-family: 'Days One', sans-serif;
+  font-size: 1.4rem;
+}
+@media (max-width: 500px) {
+  .myHistory table,
+  .myHistory tr {
+    font-size: 0.8rem;
+  }
+}
+.myHistory th,
+.myHistory td {
+  text-align: center;
+  background: #262728;
+}
+.myHistory th {
+  color: #008000;
+}
+.myFeet {
+  width: 100%;
+  margin: 2% 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.myFeet div {
+  width: 60%;
+  padding: 4%;
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.myFeet p {
+  color: white;
+}
+.myFeet p #pongu {
+  color: teal;
 }
