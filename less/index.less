@@ -52,8 +52,139 @@ table {
 * {
     box-sizing: border-box;
 }
+@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Days+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Contrail+One&display=swap');
 
-html, body {
-	height: 100%;
+@bgImage: url('http://www.overtapped.com/neon-city-buildings-bw3.png');
+@imgSize: 200px;
+@full: 100%;
+@font1: 'Bungee', cursive;
+@font2: 'Days One', sans-serif;
+@font3: 'Contrail One', cursive;
+
+.createBox() {
+	height: @full;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
+.makeColumn() {
+	display: flex;
+	flex-direction: column;
+}
+
+html {
+	height: @full;
+	width: @full;
+	background-color: #000000;
+}
+
+body {
+	.createBox();
+	background-image: @bgImage;
+	background-repeat: no-repeat;
+	background-size: 75% 75%;
+	background-attachment: fixed;
+	background-position: center;
+	color: white;
+}
+
+.boxedBorder {
+	display: inline-block;
+	height: @full;
+	width: @full - 10%;
+	border: 2px solid white;
+}
+
+.headGroup {
+	padding: 2%;
+}
+
+.myName {
+	display: flex;
+
+	img {
+		width: @imgSize;
+	}
+
+	div {
+		padding: 0 1%;
+		height: @imgSize;
+		width: @full;
+		.makeColumn();
+		justify-content: space-between;
+
+		h1, h2, h3 {
+			font-family: @font1;
+			color: #C0C0C0;
+		}
+	}
+}
+
+h1, h2, h3 {
+	font-family: @font1;
+	color: #00B0FF;
+}
+
+h1 {
+	font-size: 2.5rem;
+}
+
+h2 {
+	font-size: 1.9rem;
+}
+
+h3 {
+	font-size: 1.4rem;
+}
+
+.headerBtns {
+	height: 100px;
+	.makeColumn();
+	justify-content: space-around;
+}
+
+p {
+	font-family: @font2;
+	color: gold;
+}
+
+.buttonLinks {
+	width: 100px;
+	height: 30px;
+	border-radius: 10px;
+	font-family: @font3;
+	font-size: 1.2rem;
+}
+
+.myDetails {
+	width: @full;
+	padding: 0 2%;
+	display: flex;
+	justify-content: space-between;
+
+	div {
+		width: 45%;
+	}
+
+	table, tr {
+		border: 2px solid #F9812A;
+		min-width: 50%;
+		max-width: @full;
+		font-family: @font2;
+		font-size: 1.25rem;
+		color: gold;
+	}
+
+	td {
+		padding: 2%;
+		background: #262728;
+	}
+}
+
+.myHistory {
+	width: @full;
+	padding: 0 2%;
+}
