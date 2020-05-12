@@ -52,8 +52,259 @@ table {
 * {
     box-sizing: border-box;
 }
+@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Days+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Contrail+One&display=swap');
 
-html, body {
-    height: 100%;
+@bgImage: url('http://www.overtapped.com/neon-city-buildings-bw3.png');
+@imgSize: 200px;
+@full: 100%;
+@font1: 'Bungee', cursive;
+@font2: 'Days One', sans-serif;
+@font3: 'Contrail One', cursive;
+@colorDarkCharcoal: #262728;
+@colorRust: #F9812A;
+@colorNeonBlue: #011FFD;
+
+.createBox() {
+	height: @full;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
+.mainImagePositioning() {
+	background-repeat: no-repeat;
+	background-size: 75% 75%;
+	background-attachment: fixed;
+	background-position: center;
+}
+
+.makeColumn() {
+	display: flex;
+	flex-direction: column;
+}
+
+html {
+	height: @full * 1.2;
+	width: @full;
+	background-color: #000000;
+
+	@media(max-width: 500px) {
+		height: @full * 0.8;
+	}
+}
+
+body {
+	.createBox();
+	background-image: @bgImage;
+	.mainImagePositioning();
+	color: white;
+}
+
+.boxedBorder {
+	display: inline-block;
+	height: @full;
+	width: @full - 10%;
+	border: 2px solid white;
+}
+
+.headGroup {
+	padding: 2%;
+}
+
+.myName {
+	display: flex;
+
+	img {
+		width: @imgSize;
+
+		@media(max-width: 500px) {
+			width: 100px;
+			height: 100px;
+		}
+	}
+
+	div {
+		padding: 0 1%;
+		height: @imgSize;
+		width: @full;
+		.makeColumn();
+		justify-content: space-between;
+
+		@media(max-width: 500px) {
+			height: 100px;
+		}
+
+		h1, h2, h3 {
+			font-family: @font1;
+			color: #C0C0C0;
+		}
+	}
+}
+
+h1, h2, h3 {
+	font-family: @font1;
+	color: #00B0FF;
+}
+
+h1 {
+	font-size: 2.5rem;
+
+	@media(max-width: 500px) {
+		font-size: 1.5rem;
+	}
+}
+
+h2 {
+	font-size: 1.9rem;
+
+	@media(max-width: 500px) {
+		font-size: 1.2rem;
+	}
+}
+
+h3 {
+	font-size: 1.4rem;
+
+	@media(max-width: 500px) {
+		font-size: 0.9rem;
+	}
+}
+
+.headerBtns {
+	height: 100px;
+	.makeColumn();
+	justify-content: space-around;
+
+	@media(max-width: 500px) {
+		height: 50px;
+	}
+
+	nav {
+		width: 40%;
+		display: flex;
+		justify-content: space-between;
+
+		@media(max-width: 500px) {
+			flex-wrap: wrap;
+		}
+	}
+}
+
+p {
+	font-family: @font2;
+	color: gold;
+
+	@media(max-width: 500px) {
+		font-size: 0.8rem;
+	}
+}
+
+.buttonLinks {
+	width: 120px;
+	height: 40px;
+	border-radius: 10px;
+	font-family: @font3;
+	font-size: 1.2rem;
+
+	@media(max-width: 500px) {
+		width: 60px;
+		height: 20px;
+		border-radius: 5px;
+		font-size: 0.6rem;
+	}
+}
+
+.myDetails {
+	width: @full;
+	padding: 0 2%;
+	margin: 2% 0;
+	display: flex;
+	justify-content: space-between;
+
+	div {
+		width: 45%;
+	}
+
+	p {
+		background-color: @colorDarkCharcoal;
+		margin: 2% 0;
+
+		@media(max-width: 500px) {
+			font-size: 0.75rem;
+		}
+	}
+
+	table, tr {
+		border: 2px solid @colorRust;
+		min-width: 50%;
+		max-width: @full;
+		font-family: @font2;
+		font-size: 1.25rem;
+		color: gold;
+
+		@media(max-width: 500px) {
+			font-size: 0.75rem;
+		}
+	}
+
+	td {
+		padding: 2%;
+		background: @colorDarkCharcoal;
+	}
+}
+
+.myHistory {
+	width: @full;
+	margin: 4% 0;
+	padding: 0 2%;
+
+	table {
+		width: @full - 10%;
+	}
+
+	table, tr {
+		border: 2px solid @colorNeonBlue;
+		font-family: @font2;
+		font-size: 1.4rem;
+
+		@media(max-width: 500px) {
+			font-size: 0.8rem;
+		}
+	}
+
+	th, td {
+		text-align: center;
+		background: @colorDarkCharcoal;
+	}
+
+	th {
+		color: #008000;
+	}
+}
+
+.myFeet {
+	width: @full;
+	margin: 2% 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	div {
+		width: 60%;
+		padding: 4%;
+		background: black;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	p {
+		color: white;
+
+		#pongu {
+			color: teal;
+		}
+	}
+}

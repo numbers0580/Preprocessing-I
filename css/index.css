@@ -1,1 +1,377 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: 'Bungee';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Bungee'), local('Bungee-Regular'), url(https://fonts.gstatic.com/s/bungee/v5/N0bU2SZBIuF2PU_ECg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Days One';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Days One'), local('DaysOne-Regular'), url(https://fonts.gstatic.com/s/daysone/v9/mem9YaCnxnKRiYZOCLYV.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Contrail One';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Contrail One'), local('ContrailOne-Regular'), url(https://fonts.gstatic.com/s/contrailone/v9/eLGbP-j_JA-kG0_Zo51noafdZQ.ttf) format('truetype');
+}
+html {
+  height: 120%;
+  width: 100%;
+  background-color: #000000;
+}
+@media (max-width: 500px) {
+  html {
+    height: 80%;
+  }
+}
+body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url('http://www.overtapped.com/neon-city-buildings-bw3.png');
+  background-repeat: no-repeat;
+  background-size: 75% 75%;
+  background-attachment: fixed;
+  background-position: center;
+  color: white;
+}
+.boxedBorder {
+  display: inline-block;
+  height: 100%;
+  width: 90%;
+  border: 2px solid white;
+}
+.headGroup {
+  padding: 2%;
+}
+.myName {
+  display: flex;
+}
+.myName img {
+  width: 200px;
+}
+@media (max-width: 500px) {
+  .myName img {
+    width: 100px;
+    height: 100px;
+  }
+}
+.myName div {
+  padding: 0 1%;
+  height: 200px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+@media (max-width: 500px) {
+  .myName div {
+    height: 100px;
+  }
+}
+.myName div h1,
+.myName div h2,
+.myName div h3 {
+  font-family: 'Bungee', cursive;
+  color: #C0C0C0;
+}
+h1,
+h2,
+h3 {
+  font-family: 'Bungee', cursive;
+  color: #00B0FF;
+}
+h1 {
+  font-size: 2.5rem;
+}
+@media (max-width: 500px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+}
+h2 {
+  font-size: 1.9rem;
+}
+@media (max-width: 500px) {
+  h2 {
+    font-size: 1.2rem;
+  }
+}
+h3 {
+  font-size: 1.4rem;
+}
+@media (max-width: 500px) {
+  h3 {
+    font-size: 0.9rem;
+  }
+}
+.headerBtns {
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+@media (max-width: 500px) {
+  .headerBtns {
+    height: 50px;
+  }
+}
+.headerBtns nav {
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 500px) {
+  .headerBtns nav {
+    flex-wrap: wrap;
+  }
+}
+p {
+  font-family: 'Days One', sans-serif;
+  color: gold;
+}
+@media (max-width: 500px) {
+  p {
+    font-size: 0.8rem;
+  }
+}
+.buttonLinks {
+  width: 120px;
+  height: 40px;
+  border-radius: 10px;
+  font-family: 'Contrail One', cursive;
+  font-size: 1.2rem;
+}
+@media (max-width: 500px) {
+  .buttonLinks {
+    width: 60px;
+    height: 20px;
+    border-radius: 5px;
+    font-size: 0.6rem;
+  }
+}
+.myDetails {
+  width: 100%;
+  padding: 0 2%;
+  margin: 2% 0;
+  display: flex;
+  justify-content: space-between;
+}
+.myDetails div {
+  width: 45%;
+}
+.myDetails p {
+  background-color: #262728;
+  margin: 2% 0;
+}
+@media (max-width: 500px) {
+  .myDetails p {
+    font-size: 0.75rem;
+  }
+}
+.myDetails table,
+.myDetails tr {
+  border: 2px solid #F9812A;
+  min-width: 50%;
+  max-width: 100%;
+  font-family: 'Days One', sans-serif;
+  font-size: 1.25rem;
+  color: gold;
+}
+@media (max-width: 500px) {
+  .myDetails table,
+  .myDetails tr {
+    font-size: 0.75rem;
+  }
+}
+.myDetails td {
+  padding: 2%;
+  background: #262728;
+}
+.myHistory {
+  width: 100%;
+  margin: 4% 0;
+  padding: 0 2%;
+}
+.myHistory table {
+  width: 90%;
+}
+.myHistory table,
+.myHistory tr {
+  border: 2px solid #011FFD;
+  font-family: 'Days One', sans-serif;
+  font-size: 1.4rem;
+}
+@media (max-width: 500px) {
+  .myHistory table,
+  .myHistory tr {
+    font-size: 0.8rem;
+  }
+}
+.myHistory th,
+.myHistory td {
+  text-align: center;
+  background: #262728;
+}
+.myHistory th {
+  color: #008000;
+}
+.myFeet {
+  width: 100%;
+  margin: 2% 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.myFeet div {
+  width: 60%;
+  padding: 4%;
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.myFeet p {
+  color: white;
+}
+.myFeet p #pongu {
+  color: teal;
+}
